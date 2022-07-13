@@ -1,4 +1,4 @@
-const socket= io.connect('https://makuse-socket.herokuapp.com');
+const socket= io.connect('http://188.166.133.11:5000/');
 
 
 const sender= document.getElementById('sender');
