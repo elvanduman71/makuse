@@ -14,10 +14,7 @@ const io = require('./socket').init(server);
 io.on('connection', socket => {
     console.log(socket.id);
     socket.on('chat' , data => {
-        io.sockets.emit('chat', data);
+        io.sockets.emit('temp', data);
     })
 
-    socket.on('hum' , data2 => {
-        io.sockets.emit('temp', "Veri geldiiii"+data2);
-    })
 })

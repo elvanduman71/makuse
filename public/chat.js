@@ -1,4 +1,4 @@
-const socket= io.connect('http://188.166.133.11:5000/');
+const socket= io.connect('http://188.166.133.11:5000');
 
 
 const sender= document.getElementById('sender');
@@ -15,10 +15,7 @@ submitBtn.addEventListener('click', () => {
     })
 })
 
-socket.on('chat', data => {
-    output.innerHTML +='<p><strong>' + data.sender+ '</strong>' + data.message + '</p>';
+socket.on('temp', data => {
+    output.innerHTML +='<p><strong>aaaaaaaa</p>';
 })
 
-socket.on('temp', data2 => {
-    output.innerHTML +='<p>aaaa'+ data2 +'</p>';
-})
